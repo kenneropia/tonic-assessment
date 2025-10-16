@@ -1,9 +1,3 @@
-# Tonic Bank API Authentication Flow
-
-## Overview
-
-The Tonic Bank API uses a JWT-based authentication system with access and refresh tokens.
-
 ## Authentication Flow
 
 1. **User Registration (Signup)**
@@ -30,10 +24,3 @@ The Tonic Bank API uses a JWT-based authentication system with access and refres
    - Client calls `/auth/signout` with access token
    - System invalidates the refresh token
    - Client discards both tokens
-
-## Security Considerations
-
-- Access tokens are short-lived (15 minutes) to minimize risk if compromised
-- Refresh tokens are long-lived (7 days) but can be revoked
-- All authentication endpoints are rate-limited to prevent brute force attacks
-- Passwords are hashed using argon before storage
